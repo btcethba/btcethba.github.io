@@ -1,4 +1,4 @@
-<title>{{ .Title }} | {{ site.Title }}</title>
+<title>{{ .Title }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ if .Description }}
@@ -6,4 +6,13 @@
 {{ else if site.Params.description }}
   <meta name="description" content="{{ site.Params.description }}">
 {{ end }}
-<link rel="stylesheet" href="{{ "css/book.min.css" | relURL }}">
+
+<!-- 直接引用主题的样式文件 -->
+{{ $style := resources.Get "css/book.min.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ 
+$style.Data.Integrity }}" media="screen">
+
+<!-- 引用主题的 JavaScript（可选） -->
+{{ $js := resources.Get "js/book.min.js" | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ 
+$js.Data.Integrity }}"></script>
