@@ -2,3 +2,6 @@ baseURL = 'https://btcethba.github.io/'
 languageCode = 'zh-cn'
 title = 'BTCETHBA'
 theme = 'hugo-book'
+
+[params]
+  BookTitleSeparator = " | "
