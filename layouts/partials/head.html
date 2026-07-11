@@ -1,0 +1,9 @@
+<title>{{ .Title }} | {{ site.Title }}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ if .Description }}
+  <meta name="description" content="{{ .Description }}">
+{{ else if site.Params.description }}
+  <meta name="description" content="{{ site.Params.description }}">
+{{ end }}
+<link rel="stylesheet" href="{{ "css/book.min.css" | relURL }}">
