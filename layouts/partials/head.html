@@ -1,18 +1,9 @@
-<title>{{ .Title }}</title>
+<title>首页 | BTCETHBA</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
-{{ else if site.Params.description }}
-  <meta name="description" content="{{ site.Params.description }}">
-{{ end }}
+<link rel="stylesheet" href="/css/book.min.css">
 
-<!-- 直接引用主题的样式文件 -->
-{{ $style := resources.Get "css/book.min.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ 
-$style.Data.Integrity }}" media="screen">
-
-<!-- 引用主题的 JavaScript（可选） -->
-{{ $js := resources.Get "js/book.min.js" | fingerprint }}
-<script defer src="{{ $js.RelPermalink }}" integrity="{{ 
-$js.Data.Integrity }}"></script>
+<script>
+  // 强制修改标题，确保不会被其他脚本覆盖
+  document.title = "首页 | BTCETHBA";
+</script>
