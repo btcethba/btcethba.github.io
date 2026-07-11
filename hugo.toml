@@ -4,4 +4,6 @@ title = 'BTCETHBA'
 theme = 'hugo-book'
 
 [params]
-  BookTitleSeparator = " | "
+  BookTitleSeparator = ""
+  BookSearch = true
+  BookCollapseSection = true
