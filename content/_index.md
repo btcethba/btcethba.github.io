@@ -1,4 +1,4 @@
 ---
-title: "首页 | BTCETHBA"
+title: "首页"
 ---
 
